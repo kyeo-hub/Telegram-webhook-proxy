@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  telegram-proxy:
+    container_name: telegram-proxy
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - TELEGRAM_TOKEN=8497461396:AAHi1991Zv5tOhRafoPJ4pR9XW2gg3_BRVs
+      - API_KEYS=10an.fun,kky.ac.cn,kyeo.top
+    restart: unless-stopped
+    network_mode: bridge
